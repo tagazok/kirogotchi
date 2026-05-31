@@ -1,0 +1,313 @@
+<screen>
+	<styles>
+		<!-- Root -->
+		<style name="st_root_bg" bg_color="0x050507" bg_opa="255" border_width="0" pad_all="0" />
+
+		<!-- Panels -->
+		<style name="st_panel" bg_color="0x050507" bg_opa="255" border_width="0" pad_all="0" />
+
+		<style name="st_panel_soft" bg_color="0x11141B" bg_opa="255" radius="14" border_color="0x252A38" pad_all="0" />
+
+		<style name="st_tab_bar" bg_color="0x111318" bg_opa="255" radius="14" border_width="0" pad_all="0" />
+
+		<style name="st_tab_active" bg_color="0x16E0A7" bg_opa="255" radius="14" border_width="0" pad_all="0" />
+
+		<style
+			name="st_row_selected"
+			bg_color="0x101D32"
+			bg_opa="255"
+			radius="10"
+			border_width="1"
+			border_color="0x245AA0"
+			pad_all="0"
+		/>
+
+		<!-- Text styles -->
+		<style name="st_text" text_color="0xF7F7FF" />
+
+		<style name="st_muted" text_color="0x9DA2B3" />
+
+		<style name="st_title" text_color="0xF7F7FF" />
+
+		<style name="st_green_text" text_color="0x16E0A7" />
+
+		<style name="st_blue_text" text_color="0x32A8FF" />
+
+		<style name="st_purple_text" text_color="0x9B5CFF" />
+
+		<style name="st_orange_text" text_color="0xFF9F1C" />
+
+		<style name="st_tab_text_dark" text_color="0x050507" />
+
+		<!-- Bars -->
+		<style name="st_bar_track" bg_color="0x2A2D35" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_green" bg_color="0x16E0A7" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_blue" bg_color="0x32A8FF" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_orange" bg_color="0xFF9F1C" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_purple" bg_color="0x9B5CFF" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_rust" bg_color="0xD65A1F" bg_opa="255" radius="3" border_width="0" />
+
+		<!-- Dots -->
+		<style name="st_dot_green" bg_color="0x16E0A7" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_blue" bg_color="0x32A8FF" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_orange" bg_color="0xFF9F1C" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_purple" bg_color="0x9B5CFF" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_rust" bg_color="0xD65A1F" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_yellow" bg_color="0xFFD935" bg_opa="255" radius="8" border_width="0" />
+
+		<!-- Thin divider -->
+		<style name="st_divider" bg_color="0x303442" bg_opa="255" radius="0" border_width="0" />
+
+		<!-- Small stat icon blocks -->
+		<style
+			name="st_icon_green"
+			bg_color="0x103B31"
+			bg_opa="255"
+			radius="8"
+			border_width="1"
+			border_color="0x16E0A7"
+			pad_all="0"
+		/>
+
+		<style
+			name="st_icon_purple"
+			bg_color="0x24143D"
+			bg_opa="255"
+			radius="8"
+			border_width="1"
+			border_color="0x9B5CFF"
+			pad_all="0"
+		/>
+	</styles>
+
+	<view>
+		<lv_obj x="0" y="0" width="240" height="280">
+			<style name="st_root_bg" />
+
+			<!-- Header -->
+			<lv_label x="36" y="16" text="&lt;/&gt;">
+				<style name="st_green_text" />
+			</lv_label>
+
+			<lv_label x="78" y="16" text="LANG STATS">
+				<style name="st_title" />
+			</lv_label>
+
+			<!-- Tabs -->
+			<lv_obj x="12" y="42" width="216" height="28">
+				<style name="st_tab_bar" />
+
+				<lv_obj x="0" y="0" width="72" height="28">
+					<style name="st_tab_active" />
+				</lv_obj>
+
+				<lv_label x="26" y="7" text="NOW">
+					<style name="st_tab_text_dark" />
+				</lv_label>
+
+				<lv_label x="92" y="7" text="TODAY">
+					<style name="st_muted" />
+				</lv_label>
+
+				<lv_label x="176" y="7" text="7D">
+					<style name="st_muted" />
+				</lv_label>
+			</lv_obj>
+
+			<!-- Summary card -->
+			<lv_obj x="12" y="78" width="216" height="44">
+				<style name="st_panel_soft" />
+
+				<!-- Nearby -->
+				<lv_obj x="16" y="12" width="18" height="18">
+					<style name="st_icon_green" />
+				</lv_obj>
+
+				<lv_label x="44" y="8" text="Nearby">
+					<style name="st_muted" />
+				</lv_label>
+
+				<lv_label x="44" y="24" text="23">
+					<style name="st_green_text" />
+				</lv_label>
+
+				<!-- Divider -->
+				<lv_obj x="108" y="8" width="1" height="28">
+					<style name="st_divider" />
+				</lv_obj>
+
+				<!-- Match rate -->
+				<lv_obj x="124" y="12" width="18" height="18">
+					<style name="st_icon_purple" />
+				</lv_obj>
+
+				<lv_label x="152" y="8" text="Match">
+					<style name="st_muted" />
+				</lv_label>
+
+				<lv_label x="152" y="24" text="26%">
+					<style name="st_purple_text" />
+				</lv_label>
+			</lv_obj>
+
+			<!-- Leaderboard card -->
+			<lv_obj x="12" y="130" width="216" height="92">
+				<style name="st_panel" />
+
+				<!-- Selected TypeScript row background -->
+
+				<!-- Python row -->
+				<lv_obj x="14" y="9" width="9" height="9">
+					<style name="st_dot_green" />
+				</lv_obj>
+
+				<lv_label x="34" y="4" text="Python">
+					<style name="st_text" />
+				</lv_label>
+
+				<lv_obj x="94" y="10" width="86" height="5">
+					<style name="st_bar_track" />
+				</lv_obj>
+
+				<lv_obj x="94" y="10" width="70" height="5">
+					<style name="st_bar_green" />
+				</lv_obj>
+
+				<lv_label x="194" y="4" text="8">
+					<style name="st_text" />
+				</lv_label>
+
+				<!-- TypeScript row -->
+				<lv_obj x="14" y="29" width="9" height="9">
+					<style name="st_dot_blue" />
+				</lv_obj>
+
+				<lv_label x="34" y="24" text="TypeScript">
+					<style name="st_blue_text" />
+				</lv_label>
+
+				<lv_obj x="116" y="30" width="64" height="5">
+					<style name="st_bar_track" />
+				</lv_obj>
+
+				<lv_obj x="116" y="30" width="50" height="5">
+					<style name="st_bar_blue" />
+				</lv_obj>
+
+				<lv_label x="184" y="24" text="*">
+					<style name="st_blue_text" />
+				</lv_label>
+
+				<lv_label x="194" y="24" text="6">
+					<style name="st_blue_text" />
+				</lv_label>
+
+				<!-- Java row -->
+				<lv_obj x="14" y="49" width="9" height="9">
+					<style name="st_dot_orange" />
+				</lv_obj>
+
+				<lv_label x="34" y="44" text="Java">
+					<style name="st_text" />
+				</lv_label>
+
+				<lv_obj x="94" y="50" width="86" height="5">
+					<style name="st_bar_track" />
+				</lv_obj>
+
+				<lv_obj x="94" y="50" width="42" height="5">
+					<style name="st_bar_orange" />
+				</lv_obj>
+
+				<lv_label x="194" y="44" text="4">
+					<style name="st_text" />
+				</lv_label>
+
+				<!-- C# row -->
+				<lv_obj x="14" y="69" width="9" height="9">
+					<style name="st_dot_purple" />
+				</lv_obj>
+
+				<lv_label x="34" y="64" text="C#">
+					<style name="st_text" />
+				</lv_label>
+
+				<lv_obj x="94" y="70" width="86" height="5">
+					<style name="st_bar_track" />
+				</lv_obj>
+
+				<lv_obj x="94" y="70" width="32" height="5">
+					<style name="st_bar_purple" />
+				</lv_obj>
+
+				<lv_label x="194" y="64" text="3">
+					<style name="st_text" />
+				</lv_label>
+
+				<!-- Rust row -->
+				<lv_obj x="14" y="84" width="9" height="9">
+					<style name="st_dot_rust" />
+				</lv_obj>
+
+				<lv_label x="34" y="79" text="Rust">
+					<style name="st_text" />
+				</lv_label>
+
+				<lv_obj x="94" y="85" width="86" height="5">
+					<style name="st_bar_track" />
+				</lv_obj>
+
+				<lv_obj x="94" y="85" width="22" height="5">
+					<style name="st_bar_rust" />
+				</lv_obj>
+
+				<lv_label x="194" y="79" text="2">
+					<style name="st_text" />
+				</lv_label>
+			</lv_obj>
+
+			<!-- Bottom stat cards -->
+			<lv_obj x="12" y="232" width="104" height="36">
+				<style name="st_panel_soft" />
+
+				<lv_obj x="12" y="10" width="16" height="16">
+					<style name="st_icon_green" />
+				</lv_obj>
+
+				<lv_label x="36" y="6" text="Seen today">
+					<style name="st_muted" />
+				</lv_label>
+
+				<lv_label x="36" y="21" text="86">
+					<style name="st_green_text" />
+				</lv_label>
+			</lv_obj>
+
+			<lv_obj x="124" y="232" width="104" height="36">
+				<style name="st_panel_soft" />
+
+				<lv_obj x="12" y="10" width="16" height="16">
+					<style name="st_icon_purple" />
+				</lv_obj>
+
+				<lv_label x="36" y="6" text="Seen 7d">
+					<style name="st_muted" />
+				</lv_label>
+
+				<lv_label x="36" y="21" text="312">
+					<style name="st_purple_text" />
+				</lv_label>
+			</lv_obj>
+		</lv_obj>
+	</view>
+</screen>

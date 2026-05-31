@@ -1,0 +1,8 @@
+set(LV_EDITOR_PROJECT_SOURCES)
+list(
+  APPEND
+  LV_EDITOR_PROJECT_SOURCES
+  ${CMAKE_CURRENT_LIST_DIR}/screens/home_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/social_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/ui_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/ui.c)
