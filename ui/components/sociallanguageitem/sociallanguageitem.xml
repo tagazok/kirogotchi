@@ -1,0 +1,80 @@
+<!-- language_item.xml -->
+<component>
+	<api>
+		<prop name="label" type="string" default="Python" />
+		<prop name="value" type="string" default="12" />
+		<prop name="bar_width" type="px" default="42" />
+		<prop name="accent_color" type="color" default="0x3b82f6" />
+	</api>
+
+	<styles>
+		<style name="st_text" text_color="0xF7F7FF" />
+		<!-- Panels -->
+		<style name="st_panel" bg_color="0x050507" bg_opa="255" border_width="0" pad_all="0" />
+
+		<!-- Bars -->
+		<style name="st_bar_track" bg_color="0x2A2D35" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_green" bg_color="0x16E0A7" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_blue" bg_color="0x32A8FF" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_orange" bg_color="0xFF9F1C" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_purple" bg_color="0x9B5CFF" bg_opa="255" radius="3" border_width="0" />
+
+		<style name="st_bar_rust" bg_color="0xD65A1F" bg_opa="255" radius="3" border_width="0" />
+
+		<!-- Dots -->
+		<style name="st_dot_green" bg_color="0x16E0A7" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_blue" bg_color="0x32A8FF" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_orange" bg_color="0xFF9F1C" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_purple" bg_color="0x9B5CFF" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_rust" bg_color="0xD65A1F" bg_opa="255" radius="8" border_width="0" />
+
+		<style name="st_dot_yellow" bg_color="0xFFD935" bg_opa="255" radius="8" border_width="0" />
+	</styles>
+
+	<view
+		extends="lv_obj"
+		x="0"
+		y="0"
+		height="content"
+		width="100%"
+		flex_flow="row"
+		style_flex_cross_place="center"
+		style_flex_main_place="center"
+		style_flex_track_place="center"
+	>
+		<style name="st_panel" />
+		<lv_obj x="0" y="5" width="10" height="10" style_bg_color="$accent_color">
+			<style name="st_dot_blue" />
+		</lv_obj>
+
+		<lv_obj flex_flow="column" height="content" flex_grow="1">
+			<style name="st_panel" />
+			<lv_label text="$label">
+				<style name="st_text" />
+			</lv_label>
+
+			<lv_obj height="5" width="100%">
+				<style name="st_panel" />
+				<lv_obj x="0" y="0" width="275" height="5">
+					<style name="st_bar_track" />
+				</lv_obj>
+
+				<lv_obj x="0" y="0" width="$bar_width" height="5" style_bg_color="$accent_color">
+					<style name="st_bar_blue" />
+				</lv_obj>
+			</lv_obj>
+		</lv_obj>
+
+		<lv_label text="$value">
+			<style name="st_text" />
+		</lv_label>
+	</view>
+</component>

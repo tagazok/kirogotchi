@@ -107,13 +107,22 @@
 			<lv_obj x="12" y="42" width="216" height="28">
 				<style name="st_tab_bar" />
 
-				<lv_obj x="0" y="0" width="72" height="28">
+				<lv_obj
+					x="0"
+					y="0"
+					width="72"
+					height="28"
+					flex_flow="row"
+					style_flex_cross_place="center"
+					style_flex_main_place="center"
+					style_flex_track_place="center"
+				>
 					<style name="st_tab_active" />
-				</lv_obj>
 
-				<lv_label x="26" y="7" text="NOW">
-					<style name="st_tab_text_dark" />
-				</lv_label>
+					<lv_label x="0" y="0" text="NOW">
+						<style name="st_tab_text_dark" />
+					</lv_label>
+				</lv_obj>
 
 				<lv_label x="92" y="7" text="TODAY">
 					<style name="st_muted" />
@@ -148,43 +157,104 @@
 				<!-- Match rate -->
 				<lv_image x="124" y="7" src="matchrate" />
 
-				<lv_label x="152" y="8" text="Match">
+				<lv_label x="152" y="5" text="Match">
 					<style name="st_muted" />
 				</lv_label>
 
-				<lv_label x="152" y="24" text="26%">
+				<lv_label x="152" y="20" text="26%">
 					<style name="st_purple_text" />
 				</lv_label>
 			</lv_obj>
 
 			<!-- Leaderboard card -->
-			<lv_obj x="12" y="130" width="216" height="92">
+			<lv_obj x="12" y="130" width="216" height="content" flex_flow="column">
 				<style name="st_panel" />
 
 				<!-- Selected TypeScript row background -->
 
-				<!-- Python row -->
-				<lv_obj x="14" y="9" width="9" height="9">
-					<style name="st_dot_green" />
+				<social_language_item label="TypeScript" value="8" bar_width="86" accent_color="0x3b82f6" />
+
+				<!-- Python row 
+				<lv_obj
+					x="0"
+					y="0"
+					height="content"
+					width="100%"
+					flex_flow="row"
+					style_flex_cross_place="center"
+					style_flex_main_place="center"
+					style_flex_track_place="center"
+				>
+					<style name="st_panel" />
+					<lv_obj x="0" y="5" width="10" height="10">
+						<style name="st_dot_green" />
+					</lv_obj>
+
+					<lv_obj flex_flow="column" height="content" flex_grow="1">
+						<style name="st_panel" />
+						<lv_label text="Python">
+				
+							<style name="st_text" />
+						</lv_label>
+
+						<lv_obj height="5" width="content">
+							<style name="st_panel" />
+							<lv_obj x="0" y="0" width="148" height="5">
+								<style name="st_bar_track" />
+							</lv_obj>
+
+							<lv_obj x="0" y="0" width="86" height="5">
+								<style name="st_bar_green" />
+							</lv_obj>
+						</lv_obj>
+					</lv_obj>
+
+					<lv_label text="8">
+						<style name="st_text" />
+					</lv_label>
 				</lv_obj>
+-->
+				<!-- TypeScript row 
+				<lv_obj
+					x="0"
+					y="0"
+					height="content"
+					width="100%"
+					flex_flow="row"
+					style_flex_cross_place="center"
+					style_flex_main_place="center"
+					style_flex_track_place="center"
+				>
+					<style name="st_panel" />
+					<lv_obj x="0" y="5" width="10" height="10">
+						<style name="st_dot_blue" />
+					</lv_obj>
 
-				<lv_label x="34" y="4" text="Python">
-					<style name="st_text" />
-				</lv_label>
+					<lv_obj flex_flow="column" height="content" flex_grow="1">
+						<style name="st_panel" />
+						<lv_label text="TypeScript">
+				
+							<style name="st_text" />
+						</lv_label>
 
-				<lv_obj x="94" y="10" width="86" height="5">
-					<style name="st_bar_track" />
+						<lv_obj height="5" width="content">
+							<style name="st_panel" />
+							<lv_obj x="0" y="0" width="148" height="5">
+								<style name="st_bar_track" />
+							</lv_obj>
+
+							<lv_obj x="0" y="0" width="86" height="5">
+								<style name="st_bar_blue" />
+							</lv_obj>
+						</lv_obj>
+					</lv_obj>
+
+					<lv_label text="8">
+						<style name="st_text" />
+					</lv_label>
 				</lv_obj>
-
-				<lv_obj x="94" y="10" width="70" height="5">
-					<style name="st_bar_green" />
-				</lv_obj>
-
-				<lv_label x="194" y="4" text="8">
-					<style name="st_text" />
-				</lv_label>
-
-				<!-- TypeScript row -->
+-->
+				<!-- TypeScript row 
 				<lv_obj x="14" y="29" width="9" height="9">
 					<style name="st_dot_blue" />
 				</lv_obj>
@@ -208,8 +278,8 @@
 				<lv_label x="194" y="24" text="6">
 					<style name="st_blue_text" />
 				</lv_label>
-
-				<!-- Java row -->
+-->
+				<!-- Java row 
 				<lv_obj x="14" y="49" width="9" height="9">
 					<style name="st_dot_orange" />
 				</lv_obj>
@@ -229,8 +299,8 @@
 				<lv_label x="194" y="44" text="4">
 					<style name="st_text" />
 				</lv_label>
-
-				<!-- C# row -->
+-->
+				<!-- C# row 
 				<lv_obj x="14" y="69" width="9" height="9">
 					<style name="st_dot_purple" />
 				</lv_obj>
@@ -250,8 +320,8 @@
 				<lv_label x="194" y="64" text="3">
 					<style name="st_text" />
 				</lv_label>
-
-				<!-- Rust row -->
+-->
+				<!-- Rust row 
 				<lv_obj x="14" y="84" width="9" height="9">
 					<style name="st_dot_rust" />
 				</lv_obj>
@@ -270,38 +340,38 @@
 
 				<lv_label x="194" y="79" text="2">
 					<style name="st_text" />
-				</lv_label>
+				</lv_label>-->
 			</lv_obj>
 
 			<!-- Bottom stat cards -->
-			<lv_obj x="12" y="232" width="104" height="36">
+			<lv_obj x="12" y="232" width="104" height="44">
 				<style name="st_panel_soft" />
 
 				<lv_obj x="12" y="10" width="16" height="16">
 					<style name="st_icon_green" />
 				</lv_obj>
 
-				<lv_label x="36" y="6" text="Seen today">
+				<lv_label x="36" y="5" text="Today">
 					<style name="st_muted" />
 				</lv_label>
 
-				<lv_label x="36" y="21" text="86">
+				<lv_label x="36" y="20" text="86">
 					<style name="st_green_text" />
 				</lv_label>
 			</lv_obj>
 
-			<lv_obj x="124" y="232" width="104" height="36">
+			<lv_obj x="124" y="232" width="104" height="44">
 				<style name="st_panel_soft" />
 
 				<lv_obj x="12" y="10" width="16" height="16">
 					<style name="st_icon_purple" />
 				</lv_obj>
 
-				<lv_label x="36" y="6" text="Seen 7d">
+				<lv_label x="36" y="5" text="7 days">
 					<style name="st_muted" />
 				</lv_label>
 
-				<lv_label x="36" y="21" text="312">
+				<lv_label x="36" y="20" text="312">
 					<style name="st_purple_text" />
 				</lv_label>
 			</lv_obj>
