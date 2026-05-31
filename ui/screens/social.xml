@@ -129,15 +129,14 @@
 				<style name="st_panel_soft" />
 
 				<!-- Nearby -->
-				<lv_obj x="16" y="12" width="18" height="18">
-					<style name="st_icon_green" />
-				</lv_obj>
 
-				<lv_label x="44" y="8" text="Nearby">
+				<lv_image x="16" y="7" src="nearby" />
+
+				<lv_label x="44" y="5" text="Nearby">
 					<style name="st_muted" />
 				</lv_label>
 
-				<lv_label x="44" y="24" text="23">
+				<lv_label x="44" y="20" text="23">
 					<style name="st_green_text" />
 				</lv_label>
 
@@ -147,9 +146,7 @@
 				</lv_obj>
 
 				<!-- Match rate -->
-				<lv_obj x="124" y="12" width="18" height="18">
-					<style name="st_icon_purple" />
-				</lv_obj>
+				<lv_image x="124" y="7" src="matchrate" />
 
 				<lv_label x="152" y="8" text="Match">
 					<style name="st_muted" />

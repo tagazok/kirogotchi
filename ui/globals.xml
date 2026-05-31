@@ -1,25 +1,29 @@
 <globals>
-    <api>
-        <!-- Add <enumdefs> here -->
-    </api>
+	<api>
+		<!-- Add <enumdefs> here -->
+	</api>
 
-    <consts>
-        <!-- Add <px>, <int>, <color> etc here -->
-    </consts>
+	<consts>
+		<!-- Add <px>, <int>, <color> etc here -->
+	</consts>
 
-    <styles>
-        <!-- Add <style> tags here -->
-    </styles>
+	<styles>
+		<!-- Add <style> tags here -->
+	</styles>
 
-    <subjects>
-        <!-- Add <int>, <string>, or <float> subjects here -->
-    </subjects>
+	<subjects>
+		<!-- Add <int>, <string>, or <float> subjects here -->
+	</subjects>
 
-    <images>
-        <!-- Add <file> or <data> tags here -->
-    </images>
+	<images>
+		<!-- Add <file> or <data> tags here -->
+		<data name="nearby" color_format="rgb565a8" src_path="images/icon-nearby.png" />
+		<data name="matchrate" color_format="rgb565a8" src_path="images/icon-matchrate.png" />
+		<data name="seentoday" color_format="rgb565a8" src_path="images/icon-seentoday.png" />
+		<data name="seen7days" color_format="rgb565a8" src_path="images/icon-seen7days.png" />
+	</images>
 
-    <fonts>
-        <!-- Add <bin> , <tiny_ttf>, <freetype> tags here -->
-    </fonts>
+	<fonts>
+		<!-- Add <bin> , <tiny_ttf>, <freetype> tags here -->
+	</fonts>
 </globals>
